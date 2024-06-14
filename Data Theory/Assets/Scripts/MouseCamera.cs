@@ -11,8 +11,8 @@ public class MouseCamera : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        rotationX = 150;
-        rotationY = 150;
+       // rotationX = 150;
+      //  rotationY = 150;
     }
 
     // Update is called once per frame
