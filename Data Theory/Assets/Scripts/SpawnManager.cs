@@ -7,7 +7,22 @@ public class SpawnManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> enemies;
     [SerializeField] public int enemyCount = 0;
-    [SerializeField] int waveCount = 0;
+    [SerializeField] public int waveCount = 0;
+     public int f_waveCount
+    {
+        get { return waveCount; }
+        set
+        {
+            if (waveCount < 0)
+            {
+                waveCount = 1;
+            }
+            else
+            {
+                waveCount = value;
+            }
+        }
+    }
     [SerializeField] GameObject player;
     [SerializeField] TextMeshProUGUI waveCountText;
     [SerializeField] TextMeshProUGUI enemiesLeftText;
